@@ -1,0 +1,33 @@
+/* Contenedor principal: Flexbox para alinear icono e input */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 8px 16px;
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para que no se estire demasiado */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: box-shadow 0.3s ease;
+}
+
+/* Efecto al hacer focus en el contenedor (opcional) */
+.search-container:focus-within {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Input invisible: quitamos bordes y fondo para que se integre */
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none; /* Quitamos el borde azul por defecto */
+  font-size: 16px;
+  width: 100%;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}

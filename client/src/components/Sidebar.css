@@ -1,0 +1,90 @@
+.sidebar {
+  width: 300px;
+  background-color: #1f2937;
+  color: white;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;   
+  justify-content: space-between; 
+  position: fixed;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sidebar-top {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebar-header {
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #374151;
+}
+
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  width: 100%;
+}
+
+.menu a {
+  display: block;
+  width: 100%;
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+  box-sizing: border-box;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: #111827;
+}
+
+
+.sidebar-user {
+  text-align: center;
+  font-size: 14px;
+  color: #d1d5db;
+  padding: 15px;
+  border-top: 1px solid #374151; 
+}
+
+.user-text {
+  white-space: pre-line;
+  line-height: 1.2;
+}
+
+.user-text {
+  color: white; /* o el color que uses */
+  font-size: 14px;
+}
+
+.btn-logout {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #374151;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-logout:hover {
+  background-color: #111827;
+}

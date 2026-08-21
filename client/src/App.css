@@ -1,0 +1,33 @@
+/* Reset global */
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #031930;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Clase para activar NavLink */
+.active-link {
+  background-color: #111827;
+  font-weight: 600;
+}
+
+/* Wrapper general de la App (no afecta login) */
+.App {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

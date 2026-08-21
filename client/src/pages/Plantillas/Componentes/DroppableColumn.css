@@ -1,0 +1,19 @@
+.editable-block {
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.editable-block:hover {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.03);
+}
+
+.editable-block .delete-btn {
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.editable-block:hover .delete-btn {
+  opacity: 1;
+}

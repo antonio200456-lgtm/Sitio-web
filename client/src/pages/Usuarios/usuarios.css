@@ -1,0 +1,240 @@
+/* Contenedor principal */
+.usuarios-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto; /* Centra el contenido */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo-principal {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Sección del Formulario (Card) */
+#seccion-agregar {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border: 1px solid #e1e4e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Botones Generales */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-guardar {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-guardar:hover {
+  background-color: #0056b3;
+}
+
+/* --- NUEVOS ESTILOS PARA EL BOTÓN DE ESTADO --- */
+.btn-estado {
+  min-width: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+.status-activo {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-activo:hover {
+  background-color: #c3e6cb;
+  transform: translateY(-1px);
+}
+
+.status-inactivo {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.status-inactivo:hover {
+  background-color: #f5c6cb;
+  transform: translateY(-1px);
+}
+
+/* Tabla */
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabla-usuarios th {
+  background-color: #343a40;
+  color: white;
+  padding: 15px;
+  /* text-align: left; */
+  font-weight: 600;
+}
+
+.tabla-usuarios td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e9ecef;
+  color: #495057;
+  vertical-align: middle;
+}
+
+.tabla-usuarios tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-usuarios tr:hover {
+  background-color: #f8f9fa;
+}
+.left-th {
+  text-align: left;
+}
+
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-cancelar {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-editar {
+  background-color: #007bff; /* Color naranja/amarillo */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn-editar:hover {
+  background-color: #1f90ec;
+}
+.acciones-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espacio entre botones */
+}
+
+/* --- ESTILOS DE PAGINACIÓN --- */
+.paginacion-container {
+  position: fixed;
+  bottom: 0;
+  right: 0; /* Pegado a la derecha */
+  width: calc(100% - 300px); /* Restamos el ancho aproximado de tu sidebar para que no lo tape */
+  /* Si tu sidebar se encoge, esto podría necesitar ajuste. Si es fijo, funciona bien */
+  
+  background-color: white;
+  border-top: 1px solid #ddd;
+  padding: 15px 0;
+  z-index: 999;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-nav, .btn-pagina {
+  padding: 8px 14px;
+  border: 1px solid #dee2e6;
+  background-color: white;
+  color: #323436; /* Color azul para números */
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.btn-nav:hover, .btn-pagina:hover {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+/* Estilo cuando el botón es la página actual */
+.btn-pagina.activo {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+/* Estilo para las flechas deshabilitadas (primera y última página) */
+.btn-nav:disabled {
+  color: #ccc;
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+  border-color: #ebebeb;
+}

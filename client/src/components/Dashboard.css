@@ -1,0 +1,85 @@
+/* Contenedor principal del dashboard */
+.dashboard {
+
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  overflow-x: hidden
+}
+
+/* Área principal (lado derecho del sidebar) */
+.main-content {
+  flex: 1;
+  margin-left: 300px; /* ancho del sidebar */
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  overflow-x: hidden
+}
+
+/* Contenido interno */
+.content {
+  flex: 1;
+  padding: 0px 15px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+/* Título de la sección */
+.content h2 {
+  font-size: 22px;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+/* Contenedor para botones y tablas */
+.module-control {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color:#343a40;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; 
+} */
+
+.templates-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color:#343a40;
+}
+
+.templates-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.editor-full {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.no-header {
+  margin-left: 0 !important;
+  padding: 0 !important;
+  width: 100vw !important;
+}
+
+.dashboard .main-content.no-header {
+  margin-left: 0 !important;
+  padding: 0 !important;
+}

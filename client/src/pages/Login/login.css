@@ -1,0 +1,146 @@
+/* Reset / base */
+:root {
+  --bg: #0f1720;         /* fondo general */
+  --card: #f7fafc;       /* tarjeta clara */
+  --muted: #6b7280;      /* texto secundario */
+  --accent: #2563eb;     /* color principal (azul) */
+  --accent-dark: #1e40af;
+  --input-bg: #fff;
+  --card-radius: 14px;
+  --card-padding: 34px;
+}
+
+/* body e índices globales (index.css ya define body, esto refina) */
+body {
+  background: linear-gradient(180deg, #0b1220 0%, #121826 100%);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  color: #0b1220;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Root app wrapper to center: */
+.app-root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Centra horizontal */
+  align-items: center;     /* Centra vertical */
+  background: linear-gradient(180deg, #0b1220 0%, #121826 100%);
+  box-sizing: border-box;
+}
+
+
+/* Card contenedor del login */
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b1220; 
+}
+
+
+.login-card {
+  background: var(--card);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  min-width: 340px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+/* fila de logos */
+.logos-row {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4px;
+  width: 100%;
+}
+
+.logo {
+  width: 84px;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+  opacity: 0.95;
+  transition: transform .18s ease, opacity .18s ease;
+}
+.logo:hover { transform: translateY(-4px); opacity: 1; }
+
+/* Título */
+.login-title {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #0b1220;
+  font-weight: 600;
+}
+
+/* Formulario y campos */
+.login-form {
+  width: 100%;
+  display: grid;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.field-label {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-left: 4px;
+}
+
+.input-field {
+  padding: 12px 14px;
+  border-radius: 999px; /* estilo pill */
+  border: 1px solid rgba(11,18,32,0.08);
+  background: var(--input-bg);
+  outline: none;
+  font-size: 0.95rem;
+  color: #0b1220;
+  box-shadow: 0 2px 8px rgba(2,6,23,0.06) inset;
+  transition: box-shadow .12s ease, border-color .12s ease, transform .06s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(37,99,235,0.12);
+  transform: translateY(-1px);
+}
+
+/* Botón */
+.btn-primary {
+  margin-top: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: none;
+  transition: transform .12s ease, box-shadow .12s ease;
+  justify-self: center; 
+  width: 220px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: none;
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+  .login-card { padding: 20px; }
+  .logo { width: 64px; }
+  .btn-primary { width: 100%; }
+}
